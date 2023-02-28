@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1100px) {
+    .menu-opcoes .detalhes-produto {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-opcoes .detalhes-produto ul {
+        columns: 2;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main form {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-opcoes {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .form-container {
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .menu-opcoes .detalhes-produto ul {
+        columns: 1;
+    }
+}

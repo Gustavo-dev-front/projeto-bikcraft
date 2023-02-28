@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1100px) {}
+
+@media only screen and (max-width: 900px) {
+
+    article.contato.container {
+        grid-template-columns: 1fr;
+    }
+
+    section.dados-contato,
+    section.form-container.contato {
+        padding: 40px;
+    }
+
+    section.dados-contato {
+        border-radius: 4px 4px 0 0;
+    }
+
+    section.form-container.contato {
+        border-radius: 0 0 4px 4px;
+    }
+
+    article.lojas-container>.container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .loja-card .conteudo-container ul {
+        columns: 1;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    section.form-container.contato form {
+        grid-template-columns: 1fr;
+    }
+}

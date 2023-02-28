@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* CSS UTILITÁRIO */
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-pagina {
+    background: #111111;
+    color: #ffffff;
+}
+
+.titulo-pagina .container {
+    padding: 60px 20px;
+}
+
+.botao {
+    display: inline-block;
+    color: #332200;
+    padding: 16px 32px;
+    background: linear-gradient(to bottom, #ffbf00, #f2a50c);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 1.125rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    max-width: max-content;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: linear-gradient(#ffb60d, #e59317);
+}
+
+.botao.secundario {
+    color: #ffffff;
+    background: #404040;
+}
+
+.botao.secundario:hover {
+    background: #5c5c5c;
+}
+
+article.lista-bicicletas .container:nth-child(2) {
+    max-width: 1440px;
+}
+
+article.lista-bicicletas ul {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+}
+
+article.lista-bicicletas ul a {
+    display: block;
+}
+
+article.lista-bicicletas li {
+    min-width: 280px;
+}
+
+article.lista-bicicletas h3 {
+    display: flex;
+    align-items: center;
+}
+
+article.lista-bicicletas h3::before {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 12px;
+    background-color: #ffbb00;
+    margin-right: 10px;
+    transition: width 0.3s linear;
+}
+
+article.lista-bicicletas li span {
+    margin-left: 22px;
+}
+
+article.lista-bicicletas a:hover h3::before {
+    width: 24px;
+}
+
+.seguros {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.seguros .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.seguros h2 {
+    grid-column: 1/-1;
+}
+
+.seguros .seguro-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    background: #000000;
+    padding: 32px 32px 32px 60px;
+    border-radius: 4px;
+}
+
+.seguros .seguro-card>span {
+    display: grid;
+    text-align: right;
+}
+
+.seguros .seguro-card ul {
+    display: grid;
+    gap: 10px;
+}
+
+.seguros .seguro-card li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seguros .seguro-card li::before {
+    content: url(../../imgs/icones/lista.svg);
+}
+
+.seguros .seguro-card .botao {
+    grid-column: 1/-1;
+    max-width: max-content;
+}
+
+.ext-small-font {
+    font-size: 0.75rem;
+    /* 12px */
+}
+
+.small-font {
+    font-size: 1.125rem;
+    /* 18px */
+}
+
+.normal-font {
+    font-size: 1.5rem;
+    /* 24px */
+}
+
+.large-font {
+    font-size: 2rem;
+    /* 32px */
+}
+
+.ext-large-font {
+    font-size: 4rem;
+    /* 64px */
+}
+
+.poppins {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+.roboto {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.merriweather {
+    font-family: 'Merriweather', cursive, serif;
+}
+
+.wght-400 {
+    font-weight: 400;
+}
+
+.wght-500 {
+    font-weight: 500;
+}
+
+.wght-600 {
+    font-weight: 600;
+}
+
+.wght-900 {
+    font-weight: 900;
+}
+
+.detail-color {
+    color: #ffbb00;
+}
+
+.secundary-color {
+    color: #b2b2b2;
+}
+
+.tertiary-color {
+    color: #595959;
+}

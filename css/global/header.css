@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+header.background {
+    background-color: #000000;
+}
+
+header #main-menu a {
+    color: #ffffff;
+    padding: 16px 12px;
+    position: relative;
+}
+
+header #main-menu a::after {
+    display: block;
+    content: "";
+    margin-top: 4px;
+    width: 0;
+    transition: width 0.3s linear;
+    background-color: #ffffff;
+    height: 2px;
+    position: absolute;
+}
+
+header #main-menu a:hover::after {
+    width: 100%;
+}
+
+header #main-menu {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+header #main-menu .menu-item {
+    display: inline-block;
+}

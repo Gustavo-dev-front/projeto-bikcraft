@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url(../global/header.css);
+@import url(../global/footer.css);
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img:not(.logo) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+main.background {
+    background-color: #000000;
+    box-shadow: inset 0 -120px white;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    gap: 40px;
+}
+
+main #introducao-conteudo {
+    align-self: center;
+}
+
+main #introducao-conteudo p {
+    margin-top: 32px;
+}
+
+article#tecnologia {
+    background-color: #111111;
+    color: #ffffff;
+    box-shadow: inset 0 -60px white, inset 0 60px white;
+}
+
+article#tecnologia .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+article#tecnologia #tecnologia-conteudo {
+    display: grid;
+    gap: 20px;
+    padding: 120px 0;
+}
+
+article#tecnologia .botao-2 {
+    display: inline-block;
+    color: #ffbb00;
+    justify-self: flex-start;
+}
+
+article#tecnologia .botao-2:hover {
+    color: white;
+}
+
+article#tecnologia .botao-2::after {
+    content: '';
+    display: block;
+    background-color: currentColor;
+    height: 4px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+article#tecnologia #vantagens {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+article#tecnologia #vantagens>div {
+    display: grid;
+    gap: 10px;
+}
+
+article#tecnologia span>img {
+    width: unset;
+    height: unset;
+}
+
+
+section#parceiros {
+    padding-bottom: 40px;
+}
+
+section#parceiros ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+section#parceiros li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+section#parceiros li:not(:nth-child(8), :nth-child(4)) {
+    border-right: 2px solid #ededed;
+}
+
+section#parceiros li:nth-child(n + 5) {
+    border-top: 2px solid #ededed;
+}
+
+section#parceiros .container:nth-child(2) {
+    max-width: 1440px;
+}
+
+section#parceiros img {
+    width: unset;
+    height: unset;
+}
+
+section#depoimento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #ffbb00;
+}
+
+section#depoimento img {
+    border-radius: unset;
+}
+
+#depoimento-img {
+    max-height: 500px;
+}
+
+#depoimento-conteudo {
+    display: grid;
+    gap: 20px;
+    padding: 80px 80px 0px 80px;
+}
+
+#depoimento-conteudo blockquote {
+    align-self: flex-end;
+    max-width: 70ch;
+    color: #332200;
+}
+
+#depoimento-conteudo p {
+    position: relative;
+}
+
+#depoimento-conteudo p::after {
+    content: "”";
+    position: absolute;
+    font-size: 3rem;
+    color: rgb(228, 163, 11);
+}
+
+#depoimento-conteudo p::before {
+    content: "“";
+    position: absolute;
+    left: -30px;
+    font-size: 3rem;
+    color: rgb(228, 163, 11);
+}
+
+#depoimento-conteudo span {
+    color: #664400;
+}

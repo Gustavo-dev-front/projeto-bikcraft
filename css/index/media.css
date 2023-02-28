@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1100px) {
+
+    section#parceiros ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section#parceiros li:nth-child(even) {
+        border-right: none;
+    }
+
+    section#parceiros li:nth-child(n + 3) {
+        border-top: 2px solid #ededed;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    main.background {
+        box-shadow: none;
+    }
+
+    main .container,
+    article#tecnologia .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main img,
+    #tecnologia-img {
+        display: none;
+    }
+
+    article#lista-bicicletas {
+        margin: unset;
+    }
+
+    section#depoimento {
+        grid-template-columns: 1fr;
+    }
+
+    section#depoimento img {
+        max-height: 200px;
+    }
+
+    #depoimento-conteudo {
+        padding: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    section#parceiros ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section#parceiros li:nth-child(even),
+    section#parceiros li:nth-child(odd) {
+        border-right: none;
+    }
+
+    section#parceiros li:nth-child(n + 2) {
+        border-top: 2px solid #ededed;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    article#tecnologia #vantagens {
+        flex-wrap: wrap;
+    }
+
+}

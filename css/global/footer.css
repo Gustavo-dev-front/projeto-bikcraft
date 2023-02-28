@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 3fr 5fr 4fr;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+footer .container h2 {
+    margin-bottom: 30px;
+}
+
+footer .container li {
+    padding: 8px 0px;
+}
+
+footer .container a:hover {
+    color: #ffffff;
+}
+
+footer .contato-container li:nth-child(even)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 4px;
+    background: #111111;
+    margin-top: 16px;
+}
+
+footer .footer-copyright {
+    grid-column: 1/-1;
+}

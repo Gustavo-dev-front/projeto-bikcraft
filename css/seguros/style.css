@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url(../global/header.css);
+@import url(../global/footer.css);
+
+.seguros {
+    padding-bottom: 40px;
+}
+
+.vantagens {
+    background: #000000;
+    color: #ffffff;
+}
+
+.vantagens .container {
+    padding: 120px 20px;
+}
+
+.vantagens .container h2 {
+    margin-bottom: 40px;
+}
+
+.lista-vantagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.lista-vantagens li {
+    display: grid;
+    gap: 8px;
+}
+
+.perguntas-frequentes .container {
+    padding: 120px 20px;
+}
+
+.perguntas-frequentes .container h2 {
+    margin-bottom: 40px;
+}
+
+.lista-perguntas>div {
+    display: grid;
+    gap: 20px;
+    padding: 36px;
+}
+
+.lista-perguntas>div:nth-child(odd) {
+    background: #f7f7f7;
+    border-radius: 4px;
+}
+
+.lista-perguntas dt {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.lista-perguntas dt::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 8px;
+    background-color: #ffbb00;
+    position: absolute;
+    left: -20px;
+}
+
+.lista-perguntas dt::after {
+    transform: rotate(180deg);
+    content: "";
+    background: url(/imgs/icones/seta-abrir.svg);
+    width: 14px;
+    height: 6px;
+    transition: transform .3s linear;
+}
+
+.lista-perguntas dt:hover {
+    cursor: pointer;
+}
+
+.lista-perguntas dt:hover::after {
+    transform: rotate(360deg);
+}
+
+.lista-perguntas dd {
+    max-width: 74ch;
+    display: none;
+}

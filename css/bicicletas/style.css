@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url(../global/header.css);
+@import url(../global/footer.css);
+
+main {
+    display: grid;
+    gap: 40px;
+}
+
+main p:not(.secundary-color) {
+    color: #595959;
+}
+
+main .bike-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px;
+}
+
+main .bike-card:nth-child(even) {
+    background: linear-gradient(to right, #ffffff 30%, #111111 30%);
+    color: #ffffff;
+}
+
+.bike-image-container {
+    position: relative;
+}
+
+.bike-image-container span {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+}
+
+.conteudo-card {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    gap: 10px;
+}
+
+.conteudo-card li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteudo-card li {
+    margin-top: 10px;
+}
+
+.conteudo-card .botao {
+    display: flex;
+    gap: 10px;
+}
+
+.conteudo-card .botao::after {
+    content: url(../../imgs/icones/seta.svg);
+    display: inline;
+    transition: transform .3s linear;
+}
+
+.conteudo-card .botao:hover::after {
+    transform: translateX(10px);
+}
+
+img:not([src$="svg"]) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+main img[src$="svg"] {
+    width: 24px;
+}

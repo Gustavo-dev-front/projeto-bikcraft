@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1100px) {}
+
+@media only screen and (max-width: 900px) {
+    .lista-vantagens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .lista-vantagens {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px) {}

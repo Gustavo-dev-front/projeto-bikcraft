@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 1100px) {}
+
+@media only screen and (max-width: 900px) {
+    main .bike-card {
+        grid-template-columns: 1fr;
+    }
+
+    main .bike-card:nth-child(even) {
+        background:  #111111;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 450px) {}

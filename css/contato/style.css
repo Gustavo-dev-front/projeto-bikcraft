@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url(../global/header.css);
+@import url(../global/footer.css);
+@import url(../global/form.css);
+
+body {
+    background: #f7f7f7;
+}
+
+main {
+    background: linear-gradient(to bottom, #111111 50%, #f7f7f7 50%);
+}
+
+article.contato.container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+
+section.dados-contato {
+    background: #000000;
+    padding: 60px;
+    border-radius: 4px 0 0 4px;
+}
+
+section.dados-contato h2 {
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+section.dados-contato ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    position: relative;
+}
+
+section.dados-contato ul li:nth-child(3),
+section.dados-contato ul li:nth-child(5),
+section.dados-contato ul li:nth-child(6) {
+    margin-bottom: 20px;
+}
+
+section.dados-contato ul li:nth-child(1)::before {
+    content: url(../../imgs/icones/local.svg);
+}
+
+section.dados-contato ul li:nth-child(4)::before {
+    content: url(../../imgs/icones/email.svg);
+}
+
+section.dados-contato ul li:nth-child(6)::before {
+    content: url(../../imgs/icones/telefone.svg);
+}
+
+section.dados-contato ul li:nth-child(1)::before,
+section.dados-contato ul li:nth-child(4)::before,
+section.dados-contato ul li:nth-child(6)::before {
+    position: absolute;
+    left: -4px;
+}
+
+section.dados-contato ul li:nth-child(7) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section.dados-contato a:hover {
+    color: #ffffff;
+}
+
+section.form-container.contato {
+    padding: 60px;
+    border-radius: 0 4px 4px 0;
+}
+
+section.form-container.contato form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.form-container.contato form .email-container,
+.form-container.contato form .mensagem-container,
+.form-container.contato form .botao {
+    grid-column: 1/-1;
+}
+
+article.lojas-container>.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 40px;
+    padding: 60px 20px;
+    color: #111111;
+}
+
+article.lojas-container>.container>h2 {
+    grid-column: 1/-1;
+}
+
+.loja-card {
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    ;
+}
+
+.loja-card .img-container img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+.loja-card .conteudo-container {
+    display: grid;
+    align-items: start;
+    gap: 20px;
+    padding: 32px;
+}
+
+.loja-card .conteudo-container ul {
+    columns: 2;
+    color: #595959;
+}
+
+.loja-card .conteudo-container ul li {
+    padding: 5px 10px;
+    border-left: 2px solid #ededed;
+}
+
+.loja-card .conteudo-container span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.loja-card .conteudo-container span::before {
+    content: url(../../imgs/icones/horario.svg);
+}
