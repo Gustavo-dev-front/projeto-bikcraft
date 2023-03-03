@@ -1,19 +1,12 @@
-const menu1 = document.querySelector(".menu-1");
-const menuBikcraft = document.querySelector(".menu-bikcraft");
-const menuSeguro = document.querySelector(".menu-seguro");
-const bikcraft = document.querySelector("#bikcraft");
-const seguro = document.querySelector("#seguro");
-
-bikcraft.addEventListener('click', bikeOuSeguro);
-seguro.addEventListener('click', bikeOuSeguro);
+const inputList = Array.from(document.querySelectorAll('.menu-opcoes input'));
 
 function bikeOuSeguro() {
-    if (bikcraft.checked == true) {
-        menuSeguro.style.display = "none";
-        menuBikcraft.style.display = "grid";
+    if (inputList[inputList.indexOf(document.querySelector(`input#bikcraft`))].checked == true) {
+        document.querySelector(".menu-seguro").style.display = "none";
+        document.querySelector(".menu-bikcraft").style.display = "grid";
     } else {
-        menuSeguro.style.display = "grid";
-        menuBikcraft.style.display = "none";
+        document.querySelector(".menu-seguro").style.display = "grid";
+        document.querySelector(".menu-bikcraft").style.display = "none";
     }
 }
 
@@ -23,10 +16,6 @@ const magicInput = document.querySelector("#magic");
 const magicDetail = document.querySelector(".detalhes-produto.magic");
 const nebulaInput = document.querySelector("#nebula");
 const nebulaDetail = document.querySelector(".detalhes-produto.nebula");
-
-nimbusInput.addEventListener('click', exibirDetalhes);
-magicInput.addEventListener('click', exibirDetalhes);
-nebulaInput.addEventListener('click', exibirDetalhes);
 
 function exibirDetalhes() {
     if (nimbusInput.checked == true) {
@@ -43,3 +32,29 @@ function exibirDetalhes() {
         magicDetail.style.display = "none";
     }
 }
+
+/* HABILITAR INPUTS CONFORME SELEÇÕES */
+
+function observarInputsMenu(item) {
+    item.addEventListener('click', bikeOuSeguro);
+}
+
+function observarBikeSelecionada(item) {
+    item.addEventListener('click', exibirDetalhes);
+}
+
+Array.from(document.querySelectorAll('.menu-1 input')).forEach(observarInputsMenu);
+
+Array.from(document.querySelectorAll('.menu-bikcraft input')).forEach(observarBikeSelecionada);
+
+/* ATIVAR PRODUTO QUE FOI SELECIONADO NAS TELAS ANTERIORES */
+const parametros = Array.from(new URLSearchParams(location.search));
+
+function ativarProduto() {
+    document.querySelector(`.menu-1 input#${parametros[0][1]}`).checked = 'true';
+    bikeOuSeguro();
+    document.querySelector(`.menu-${parametros[0][1]} input#${parametros[1][1]}`).checked = 'true';
+    exibirDetalhes();
+}
+
+parametros.forEach(ativarProduto);

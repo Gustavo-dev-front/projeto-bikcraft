@@ -170,3 +170,11 @@ main form h2::before {
 .form-container .botao {
     grid-column: 1/-1;
 }
+
+.mostrar {
+    display: grid;
+}
+
+.ocultar {
+    display: none;
+}

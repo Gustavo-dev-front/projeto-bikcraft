@@ -80,11 +80,15 @@
     cursor: pointer;
 }
 
-.lista-perguntas dt:hover::after {
-    transform: rotate(360deg);
-}
-
 .lista-perguntas dd {
     max-width: 74ch;
     display: none;
+}
+
+.resposta.ativa {
+    display: block;
+}
+
+ dt.pergunta.ativa::after {
+    transform: rotate(360deg);
 }
